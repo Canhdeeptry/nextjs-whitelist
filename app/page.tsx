@@ -11,7 +11,7 @@ export default function Home() {
     fetch('/api/whitelist')
       .then(res => res.json())
       .then(data => {
-        setDomains(data.content.split('\n').map(d => d.trim()).filter(Boolean));
+        setDomains(data.content.split('\n').map((d: string) => d.trim()).filter((d: string) => Boolean(d)));
         setSha(data.sha);
       });
   }, []);
