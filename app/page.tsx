@@ -11,28 +11,29 @@ export default function Home() {
     fetch('/api/whitelist')
       .then(res => res.json())
       .then(data => {
-        setDomains(data.content.split('\n').filter(Boolean));
+        setDomains(data.content.split('\n').map(d => d.trim()).filter(Boolean));
         setSha(data.sha);
       });
   }, []);
 
   const updateWhitelist = (newList: string[]) => {
+    const cleaned = Array.from(new Set(newList.map(d => d.trim()).filter(Boolean)));
     fetch('/api/whitelist', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        content: newList.join('\n'),
+        content: cleaned.join('\n'),
         sha: sha,
         message: 'Update whitelist'
       })
     }).then(() => {
-      setDomains(newList);
+      setDomains(cleaned);
       setNewDomain('');
     });
   };
 
   const addDomain = () => {
-    if (newDomain && !domains.includes(newDomain)) {
+    if (newDomain && !domains.includes(newDomain.trim())) {
       updateWhitelist([...domains, newDomain]);
     }
   };

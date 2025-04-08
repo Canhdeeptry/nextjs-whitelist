@@ -15,6 +15,12 @@ export async function GET() {
 export async function POST(req: Request) {
   const { content, sha, message } = await req.json();
 
+  const cleanedContent = content
+    .split('\n')
+    .map(line => line.trim())
+    .filter(line => line !== '')
+    .join('\n');
+
   const res = await fetch(`https://api.github.com/repos/Canhdeeptry/nextjs-whitelist/contents/whitelist.txt`, {
     method: 'PUT',
     headers: {
@@ -23,7 +29,7 @@ export async function POST(req: Request) {
     },
     body: JSON.stringify({
       message: message || 'Update whitelist',
-      content: Buffer.from(content).toString('base64'),
+      content: Buffer.from(cleanedContent).toString('base64'),
       sha
     })
   });
