@@ -39,8 +39,11 @@ export default function Home() {
   };
 
   const removeDomain = (domain: string) => {
-    updateWhitelist(domains.filter(d => d !== domain));
+    const updated = domains.filter(d => d !== domain);
+    setDomains(updated);
+    updateWhitelist(updated);
   };
+  
 
   return (
     <main style={{ padding: 20 }}>
