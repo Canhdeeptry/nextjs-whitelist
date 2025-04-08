@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
   const cleanedContent = content
     .split('\n')
-    .map(line => line.trim())
+    .map((line: string) => line.trim())
     .filter(line => line !== '')
     .join('\n');
 
