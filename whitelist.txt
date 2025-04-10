@@ -3,3 +3,4 @@ app.adjust.com
 js.monitor.azure.com
 js.datadome.co
 cdnt.netcoresmartech.com
+za.zalo.me
