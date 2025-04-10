@@ -1,1 +1,2 @@
 app.appsflyer.com
+app.adjust.com
