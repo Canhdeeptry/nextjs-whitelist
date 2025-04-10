@@ -1,3 +1,4 @@
 app.appsflyer.com
 app.adjust.com
 js.monitor.azure.com
+js.datadome.co
