@@ -10,3 +10,4 @@ zalo.me
 zaloweb.me
 verify.guildmergers.com
 tenor.com
+click.discord.com
