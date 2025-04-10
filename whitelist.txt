@@ -11,3 +11,4 @@ zaloweb.me
 verify.guildmergers.com
 tenor.com
 click.discord.com
+office.com
