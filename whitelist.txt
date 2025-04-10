@@ -9,3 +9,4 @@ api.statsig.com
 zalo.me
 zaloweb.me
 verify.guildmergers.com
+tenor.com
