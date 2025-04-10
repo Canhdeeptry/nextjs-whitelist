@@ -6,3 +6,4 @@ cdnt.netcoresmartech.com
 za.zalo.me
 gecko-sg.byteoversea.com
 api.statsig.com
+zalo.me
