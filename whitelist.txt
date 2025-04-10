@@ -1,1 +1,2 @@
 *.tenor.com
+*.zaloweb.me
