@@ -1,2 +1,3 @@
 app.appsflyer.com
 app.adjust.com
+js.monitor.azure.com
