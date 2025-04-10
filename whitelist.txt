@@ -1,3 +1,4 @@
 *.tenor.com
 *.zaloweb.me
 *.zalo.me
+*.api.statsig.com
